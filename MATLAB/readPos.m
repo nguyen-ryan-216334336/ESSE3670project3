@@ -11,13 +11,15 @@ stations = [
     -2267796.9641, 5009421.6975, 3220952.5436;
     1337935.78387858, 6070317.12914242, 1427877.31632779];
 
-% % % filenames
-% % if type == 'kin'
-% %     filenames = []
-% station1 = ['ALGO00CNA_3_24hr_kin.pos', ];
-% station2 = 
-% station3 = 
-% 
+% **************** enter filenames here **************************
+station1 = ['ALGO00CNA_3_24hr_kin.pos', ]; % ALGO
+station2 = []; % DUBO
+station3 = []; % WHIT
+station4 = []; % GOLD
+station5 = []; % WUHN
+station6 = []; % IISC
+
+% *****************************************************************
 % data = [station1; station2; ...];
 % 24hours = [];
 %     
