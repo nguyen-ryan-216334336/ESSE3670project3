@@ -1,0 +1,182 @@
+HDR GRP CANADIAN GEODETIC SURVEY, SURVEYOR GENERAL BRANCH, NATURAL RESOURCES CANADA
+HDR ADR GOVERNMENT OF CANADA, 588 BOOTH STREET ROOM 334, OTTAWA ONTARIO K1A 0Y7
+HDR TEL 343-292-6617
+HDR EMA nrcan.geodeticinformation-informationgeodesique.rncan@canada.ca
+VER 3.49.0 (2021-01-25)
+NOW 2021-03-10 02:17:07.00
+RNX WUHN00CHN_R_20210030000_01D_30S_MO.rnx
+MKR WUHN00CHN
+MOD KINEMATIC
+BEG 2021-01-03 00:00:00.00
+END 2021-01-03 23:59:30.00
+INT 30.00
+EPO 2880 2880 2880
+EXE 19 sec
+OBS G C1C L1C
+OBS R C1C C2P L1C L2P
+PAR TYPE         SYS SIG SAT INIT      NOISE
+PAR POS_X                    1.000e+10 1.000e+10
+PAR POS_Y                    1.000e+10 1.000e+10
+PAR POS_Z                    1.000e+10 1.000e+10
+PAR TZD                      5.000e-02 5.000e-05
+PAR TZD_GRAD_N               3.000e-03 1.667e-06
+PAR TZD_GRAD_E               3.000e-03 1.667e-06
+PAR RX_CLK       G           1.000e+10 1.000e+10
+PAR RX_CLK       R           1.000e+10 1.000e+10
+PAR AMB          G   L1C ALL 1.000e+10 0.000e+00
+PAR AMB          R   L1C ALL 1.000e+10 0.000e+00
+PAR AMB          R   L2P ALL 1.000e+10 0.000e+00
+PAR RX_USD       G   C1C     1.000e+10 1.000e+10
+PAR RX_USD       R   C1C     1.000e+10 1.000e+10
+PAR RX_USD       R   C2P     1.000e+10 1.000e+10
+PAR STEC         G       ALL 1.000e+10 1.000e-01
+PAR STEC         R       ALL 1.000e+10 1.000e-01
+SP3 dcf21390.sp3
+SP3 dcf21391.sp3
+CLK dcf21390.clk
+CLK dcf21391.clk
+ERP dcf21397.erp
+BIA dcf21390.bia
+BIA dcf21391.bia
+ADV dcf21390.adv
+ADV dcf21391.adv
+ATX igs14_2136_nrcan.atx
+GIM brdc0030.21n
+GIM brdc0040.21n
+VMF [ah|aw|zh|zw]21003.h00
+VMF [ah|aw|zh|zw]21003.h06
+VMF [ah|aw|zh|zw]21003.h12
+VMF [ah|aw|zh|zw]21003.h18
+VMF [ah|aw|zh|zw]21004.h00
+SNX igs_satellite_metadata.snx
+ELV 7.5
+TZD VMF1
+REC TRIMBLE NETR9
+ANT TRM59800.00C    NONE
+ARP   -0.009   -0.002    2.361
+PCO G01   0.000  0.000  0.091
+PCO G02  -0.000 -0.000  0.121
+PCO R01   0.000  0.000  0.091
+PCO R02  -0.000 -0.000  0.121
+OTL   .00250 .00098 .00081 .00029 .00323 .00312 .00109 .00069 .00013 .00010 .00009
+OTL   .00141 .00066 .00041 .00019 .00124 .00086 .00041 .00017 .00006 .00002 .00001
+OTL   .00075 .00027 .00016 .00008 .00111 .00101 .00037 .00020 .00001 .00001 .00001
+OTL    141.1  144.8  136.8  145.5  -80.7  -93.8  -81.1 -102.4 -165.3 -169.7 -176.9
+OTL    138.6  140.2  132.9  139.2  -98.6 -119.0 -100.0 -127.7  -54.5  -49.5 -158.0
+OTL      7.4   26.5  -15.6   26.2  158.9  128.1  156.1  118.0   92.3  113.2   10.2
+OTL COMPUTED BY M.S. BOS AND H.-G. SCHERNECK, OSO CHALMERS
+YAW G25 2021-01-03 20:04:38 2021-01-03 20:40:54 SHAD  -9.7 GPS IIF
+YAW G26 2021-01-03 10:41:11 2021-01-03 11:08:03 SHAD -11.4 GPS IIF
+IAR 0.00%
+AVF 1.000
+APR PPP
+ELL GRS80
+POS CRD  SYST        EPOCH          A_PRIORI
+POS   X IGb14 21:003:00000     -2267749.8972    
+POS   Y IGb14 21:003:00000      5009154.2077    
+POS   Z IGb14 21:003:00000      3221291.6123    
+POS LAT IGb14 21:003:00000    30 31 53.97343 
+POS LON IGb14 21:003:00000   114 21 26.16101 
+POS HGT IGb14 21:003:00000           26.4270        
+RES G C1C   0.421
+RES G GIM   1.470
+RES G L1C   0.000
+RES R C1C   0.660
+RES R C2P   0.495
+RES R L1C   0.002
+RES R L2P   0.001
+RES ELV        G_C1C   G_GIM   G_L1C   R_C1C   R_C2P   R_L1C   R_L2P 
+RES ELV  5.0   1.024   2.374   0.000   1.318   0.950   0.004   0.002 
+RES ELV 15.0   0.686   1.059   0.000   0.932   0.741   0.003   0.002 
+RES ELV 25.0   0.424   0.176   0.000   0.727   0.462   0.002   0.001 
+RES ELV 35.0   0.346   0.434   0.000   0.624   0.432   0.001   0.001 
+RES ELV 45.0   0.280   0.000   0.000   0.488   0.382   0.001   0.000 
+RES ELV 55.0   0.225   0.117   0.000   0.434   0.380   0.001   0.000 
+RES ELV 65.0   0.204   0.454   0.000   0.389   0.367   0.000   0.000 
+RES ELV 75.0   0.184   0.000   0.000   0.313   0.330   0.000   0.000 
+RES ELV 85.0   0.195   0.000   0.000   0.330   0.336   0.000   0.000 
+FLG PRN    EPO    TRK    CLK    EPH    ELV    YAW    DCB    SLP    MIS    RES
+FLG C01      0      0      0      0      0      0      0      0      0      0
+FLG C02      0      0      0      0      0      0      0      0      0      0
+FLG C03      0      0      0      0      0      0      0      0      0      0
+FLG C04      0      0      0      0      0      0      0      0      0      0
+FLG C05      0      0      0      0      0      0      0      0      0      0
+FLG C06      0      0      0      0      0      0      0      0      0      0
+FLG C07      0      0      0      0      0      0      0      0      0      0
+FLG C08      0      0      0      0      0      0      0      0      0      0
+FLG C09      0      0      0      0      0      0      0      0      0      0
+FLG C10      0      0      0      0      0      0      0      0      0      0
+FLG C11      0      0      0      0      0      0      0      0      0      0
+FLG C12      0      0      0      0      0      0      0      0      0      0
+FLG C13      0      0      0      0      0      0      0      0      0      0
+FLG C14      0      0      0      0      0      0      0      0      0      0
+FLG C16      0      0      0      0      0      0      0      0      0      0
+FLG C19      0      0      0      0      0      0      0      0      0      0
+FLG C20      0      0      0      0      0      0      0      0      0      0
+FLG C21      0      0      0      0      0      0      0      0      0      0
+FLG C22      0      0      0      0      0      0      0      0      0      0
+FLG C23      0      0      0      0      0      0      0      0      0      0
+FLG C24      0      0      0      0      0      0      0      0      0      0
+FLG C25      0      0      0      0      0      0      0      0      0      0
+FLG C26      0      0      0      0      0      0      0      0      0      0
+FLG C27      0      0      0      0      0      0      0      0      0      0
+FLG C28      0      0      0      0      0      0      0      0      0      0
+FLG C29      0      0      0      0      0      0      0      0      0      0
+FLG C30      0      0      0      0      0      0      0      0      0      0
+FLG G01    681      0      0      0     14      0      0      1      0      0
+FLG G02    890      0      0      0      0      0      0      2      0      0
+FLG G03    853      0      0      0      4      0      0      3      0      0
+FLG G04    810      0      0      0      4      0      0      4      0      0
+FLG G05    868      0      0      0      0      0      0      2      0      0
+FLG G06    847      0      0      0      0      0      0      1      0      0
+FLG G07    650      0      0      0      8      0      0      2      0      0
+FLG G08    807      0      0      0      0      0      0      2      0      0
+FLG G09    843      0      0      0      4      0      0      6      0      0
+FLG G10    728      0      0      0      5      0      0      2      0      0
+FLG G12    878      0      0      0      3      0      0      4      0      0
+FLG G13    703      0      0      0      0      0      0      1      0      0
+FLG G14    748      0      0      0      1      0      0      1      0      0
+FLG G15    816      0      0      0      0      0      0      2      0      0
+FLG G16    808      0      0      0      0      0      0      7      0      0
+FLG G17    867      0      0      0      0      0      0      1      0      0
+FLG G18    648      0      0      0     35      0      0      6      0      0
+FLG G19    764      0      0      0      0      0      0      2      0      0
+FLG G20    765      0      0      0      0      0      0      1      0      0
+FLG G21    675      0      0      0     15      0      0      3      0      0
+FLG G22    867      0      0      0      6      0      0      3      0      0
+FLG G23    786      0      0      0      4      0      0      1      0      0
+FLG G24    693      0      0      0      6      0      0      1      0      0
+FLG G25    740      0      0      0      8     53      0      4      0      0
+FLG G26    783      0      0      0      0     25      0      1      0      0
+FLG G27    691      0      0      0      0      0      0      1      0      0
+FLG G28    754      0      0      0     10      0      0      2      0      0
+FLG G29    894      0      0      0      0      0      0      5      0      0
+FLG G30    836      0      0      0      6      0      0      4      0      0
+FLG G31    845      0      0      0      0      0      0      4      0      0
+FLG G32    810      0      0      0      0      0      0      1      0      0
+FLG R01    626      0      0      0      0      0      0      6      0      0
+FLG R02    626    143      2      0     12      0      0      2      0      0
+FLG R03    821    203      2      0      8      0      0      3      0      0
+FLG R04   1041      0      0      0      0      0      0      2      0      0
+FLG R05    793      0      0      0      7      0      0      5      0      0
+FLG R06      0    359    201      0      0      0      0      0      0      0
+FLG R07    746      0      2      0      3      0      0     10      0      0
+FLG R08    731      0      6      0      0      0      0      8      0      0
+FLG R09    779      0      0      0      0      0      0      2      0      0
+FLG R10      0    464    279      0      0      0      0      0      0      0
+FLG R12    685      4      0      0     57      0      0      6      0      0
+FLG R13    789      0      6      0      0      0      0     21      0      0
+FLG R14    940      3      0      0      1      0      0     19      0      0
+FLG R15    763      2      0      0     11      0      0      8      0      0
+FLG R16    736      0      2      0      0      0      0      4      0      0
+FLG R17    616    143      0      0     60      0      0      4      0      0
+FLG R18    722    230      0      0      0      0      0     12      0      0
+FLG R19    730     52      2      0      0      0      0     10      0      0
+FLG R20    529      0      2      0      0      0      0      9      0      0
+FLG R21    622      0      0      0     12      0      0      1      0      0
+FLG R22    662     10      0      0      0      0      0      1      0      0
+FLG R23      0    502    282      0      0      0      0      0      0      0
+FLG R24    770      0      0      0      0      0      0      3      0      0
+FLG CXX      0      0      0      0      0      0      0      0      0      0
+FLG GXX  24348      0      0      0    133     78      0     80      0      0
+FLG RXX  14727   2115    786      0    171      0      0    136      0      0
