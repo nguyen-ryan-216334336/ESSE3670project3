@@ -119,5 +119,48 @@ for i = 1:24
     end
 end
 
+% 30 min
+h_RMSE_30min = zeros(24,1);
+v_RMSE_30min = zeros(24,1);
+j = 1;
+for i = 1:24 
+    [h_RMSE, v_RMSE] = readPos(sprintf('%s', station30MIN{i}), j);
+    h_RMSE_30min(i) = h_RMSE;
+    v_RMSE_30min(i) = v_RMSE;
+    j = j+1;
+    if j > 6
+        j = 1;
+    end
 end
+
+%kinematic
+h_RMSE_kin = zeros(24,1);
+v_RMSE_kin = zeros(24,1);
+j = 1;
+for i = 1:24 
+    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationKIN{i}), j);
+    h_RMSE_kin(i) = h_RMSE;
+    v_RMSE_kin(i) = v_RMSE;
+    j = j+1;
+    if j > 6
+        j = 1;
+    end
+end
+
+%static
+h_RMSE_stat = zeros(24,1);
+v_RMSE_stat = zeros(24,1);
+j = 1;
+for i = 1:24 
+    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationSTAT{i}), j);
+    h_RMSE_stat(i) = h_RMSE;
+    v_RMSE_stat(i) = v_RMSE;
+    j = j+1;
+    if j > 6
+        j = 1;
+    end
+
+end
+
+
 
