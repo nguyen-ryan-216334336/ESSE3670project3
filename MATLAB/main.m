@@ -1,4 +1,4 @@
-function [RMSE_24hr] = main()
+function [h_RMSE_24hr, v_RMSE_24hr] = main()
 
 % "stations" is composed of all station reference ECEF (XYZ) coordinates
 % station 1: ALGO, station 2: DUBO, station 3: WHIT, station 4: GOLD,
@@ -103,13 +103,16 @@ stationD3 = {station25;station26;station27;station28;station29;station30;
     station31;station32;station33;station34;station35;station36;station37;station38;station39;station40;
     station41;station42;station43;station44;station45;station46;station47;station48};
 
-% RMSE for 24 hour data arc
+% horizontal and vertical RMSE for 24 hour data arc
 % j counts through the stations numbers (1 to 6) to be used in readPos
 % i iterates through each element of the 24H vector
-RMSE_24hr = zeros(24,1);
+h_RMSE_24hr = zeros(24,1);
+v_RMSE_24hr = zeros(24,1);
 j = 1;
 for i = 1:24 
-    RMSE_24hr(i) = readPos(sprintf('%s', station24H{i}), j);
+    [h_RMSE, v_RMSE] = readPos(sprintf('%s', station24H{i}), j);
+    h_RMSE_24hr(i) = h_RMSE;
+    v_RMSE_24hr(i) = v_RMSE;
     j = j+1;
     if j > 6
         j = 1;

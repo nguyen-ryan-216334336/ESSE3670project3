@@ -1,4 +1,4 @@
-function [solutions] = readPos(path_file, station)
+function [h_RMSE, v_RMSE] = readPos(path_file, station)
 
 % "stations" is composed of all station reference ECEF (XYZ) coordinates
 % station 1: ALGO, station 2: DUBO, station 3: WHIT, station 4: GOLD,
