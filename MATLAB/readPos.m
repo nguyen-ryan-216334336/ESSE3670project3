@@ -13,14 +13,6 @@ stations = [
 
 
 % *****************************************************************
-% data = [station1; station2; ...];
-% 24hours = [];
-%     
-% for i = 1:48
-% if data(i) contains('24')
-%     24hours = [24hours; data(i)];
-% end
-% end
 
 pos_file = fopen(path_file,'r');
 solutions = struct();
@@ -115,21 +107,21 @@ solutions.v_RMSE = v_RMSE;
 fclose(pos_file);
 
 % ************* plotting ************************
-figure('Position', [50 50 1000 600])
-yyaxis right
-plot(solutions.decimalHour, solutions.GDOP);
-ylabel('GDOP'); ylim([0 5])
-yyaxis left
-plot(solutions.decimalHour, solutions.num_sat);
-ylabel('Number of Satellites'); ylim([0 25])
-grid on; xlabel('Time (Hours)')
-
-figure('Position', [50 50 1000 600])
-subplot(2,1,1)
-plot(solutions.decimalHour, solutions.hor_error)
-ylabel('Horizontal Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
-subplot(2,1,2)
-plot(solutions.decimalHour, solutions.vert_error)
-ylabel('Vertical Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
+% figure('Position', [50 50 1000 600])
+% yyaxis right
+% plot(solutions.decimalHour, solutions.GDOP);
+% ylabel('GDOP'); ylim([0 5])
+% yyaxis left
+% plot(solutions.decimalHour, solutions.num_sat);
+% ylabel('Number of Satellites'); ylim([0 25])
+% grid on; xlabel('Time (Hours)')
+% 
+% figure('Position', [50 50 1000 600])
+% subplot(2,1,1)
+% plot(solutions.decimalHour, solutions.hor_error)
+% ylabel('Horizontal Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
+% subplot(2,1,2)
+% plot(solutions.decimalHour, solutions.vert_error)
+% ylabel('Vertical Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
 
 end
