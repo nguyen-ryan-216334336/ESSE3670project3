@@ -160,6 +160,34 @@ for i = 1:24
         j = 1;
     end
 
+%day 2
+h_RMSE_day2 = zeros(24,1);
+v_RMSE_day2 = zeros(24,1);
+j = 1;
+for i = 1:24 
+    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD2{i}), j);
+    h_RMSE_day2(i) = h_RMSE;
+    v_RMSE_day2(i) = v_RMSE;
+    j = j+1;
+    if j > 6
+        j = 1;
+    end
+end
+
+%day 3
+h_RMSE_day3 = zeros(24,1);
+v_RMSE_day3 = zeros(24,1);
+j = 1;
+for i = 1:24 
+    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD3{i}), j);
+    h_RMSE_day3(i) = h_RMSE;
+    v_RMSE_day3(i) = v_RMSE;
+    j = j+1;
+    if j > 6
+        j = 1;
+    end
+end
+
 end
 
 
