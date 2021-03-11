@@ -1,3 +1,5 @@
+function
+
 % "stations" is composed of all station reference ECEF (XYZ) coordinates
 % station 1: ALGO, station 2: DUBO, station 3: WHIT, station 4: GOLD,
 % station 5: WUHN, station 6: IISC
