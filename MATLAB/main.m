@@ -1,4 +1,4 @@
-function [h_RMSE_24hr, v_RMSE_24hr] = main()
+function [h_RMSE_30min, v_RMSE_30min] = main()
 
 % main is used to analyze the effect of data arc length and the effect of
 % the data processing mode
@@ -123,19 +123,19 @@ for i = 1:24
     end
 end
 
-% % 30 min
-% h_RMSE_30min = zeros(24,1);
-% v_RMSE_30min = zeros(24,1);
-% j = 1;
-% for i = 1:24 
-%     solutions = readPos(sprintf('%s', station30MIN{i}), j);
-%     h_RMSE_30min(i) = solutions.h_RMSE;
-%     v_RMSE_30min(i) = solutions.v_RMSE;
-%     j = j+1;
-%     if j > 6
-%         j = 1;
-%     end
-% end
+% 30 min
+h_RMSE_30min = zeros(24,1);
+v_RMSE_30min = zeros(24,1);
+j = 1;
+for i = 1:24 
+    solutions = readPos(sprintf('%s', station30MIN{i}), j);
+    h_RMSE_30min(i) = solutions.h_RMSE;
+    v_RMSE_30min(i) = solutions.v_RMSE;
+    j = j+1;
+    if j > 6
+        j = 1;
+    end
+end
 
 % %kinematic
 % h_RMSE_kin = zeros(24,1);
