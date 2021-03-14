@@ -1,5 +1,8 @@
 function [h_RMSE_24hr, v_RMSE_24hr] = main()
 
+% main is used to analyze the effect of data arc length and the effect of
+% the data processing mode
+
 % "stations" is composed of all station reference ECEF (XYZ) coordinates
 % station 1: ALGO, station 2: DUBO, station 3: WHIT, station 4: GOLD,
 % station 5: WUHN, station 6: IISC
@@ -110,83 +113,84 @@ h_RMSE_24hr = zeros(24,1);
 v_RMSE_24hr = zeros(24,1);
 j = 1;
 for i = 1:24 
-    [h_RMSE, v_RMSE] = readPos(sprintf('%s', station24H{i}), j);
-    h_RMSE_24hr(i) = h_RMSE;
-    v_RMSE_24hr(i) = v_RMSE;
+%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', station24H{i}), j);
+    solutions = readPos(sprintf('%s', station24H{i}), j);
+    h_RMSE_24hr(i) = solutions.h_RMSE;
+    v_RMSE_24hr(i) = solutions.v_RMSE;
     j = j+1;
     if j > 6
         j = 1;
     end
 end
 
-% 30 min
-h_RMSE_30min = zeros(24,1);
-v_RMSE_30min = zeros(24,1);
-j = 1;
-for i = 1:24 
-    [h_RMSE, v_RMSE] = readPos(sprintf('%s', station30MIN{i}), j);
-    h_RMSE_30min(i) = h_RMSE;
-    v_RMSE_30min(i) = v_RMSE;
-    j = j+1;
-    if j > 6
-        j = 1;
-    end
-end
+% % 30 min
+% h_RMSE_30min = zeros(24,1);
+% v_RMSE_30min = zeros(24,1);
+% j = 1;
+% for i = 1:24 
+%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', station30MIN{i}), j);
+%     h_RMSE_30min(i) = h_RMSE;
+%     v_RMSE_30min(i) = v_RMSE;
+%     j = j+1;
+%     if j > 6
+%         j = 1;
+%     end
+% end
 
-%kinematic
-h_RMSE_kin = zeros(24,1);
-v_RMSE_kin = zeros(24,1);
-j = 1;
-for i = 1:24 
-    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationKIN{i}), j);
-    h_RMSE_kin(i) = h_RMSE;
-    v_RMSE_kin(i) = v_RMSE;
-    j = j+1;
-    if j > 6
-        j = 1;
-    end
-end
-
-%static
-h_RMSE_stat = zeros(24,1);
-v_RMSE_stat = zeros(24,1);
-j = 1;
-for i = 1:24 
-    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationSTAT{i}), j);
-    h_RMSE_stat(i) = h_RMSE;
-    v_RMSE_stat(i) = v_RMSE;
-    j = j+1;
-    if j > 6
-        j = 1;
-    end
-
-%day 2
-h_RMSE_day2 = zeros(24,1);
-v_RMSE_day2 = zeros(24,1);
-j = 1;
-for i = 1:24 
-    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD2{i}), j);
-    h_RMSE_day2(i) = h_RMSE;
-    v_RMSE_day2(i) = v_RMSE;
-    j = j+1;
-    if j > 6
-        j = 1;
-    end
-end
-
-%day 3
-h_RMSE_day3 = zeros(24,1);
-v_RMSE_day3 = zeros(24,1);
-j = 1;
-for i = 1:24 
-    [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD3{i}), j);
-    h_RMSE_day3(i) = h_RMSE;
-    v_RMSE_day3(i) = v_RMSE;
-    j = j+1;
-    if j > 6
-        j = 1;
-    end
-end
+% %kinematic
+% h_RMSE_kin = zeros(24,1);
+% v_RMSE_kin = zeros(24,1);
+% j = 1;
+% for i = 1:24 
+%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationKIN{i}), j);
+%     h_RMSE_kin(i) = h_RMSE;
+%     v_RMSE_kin(i) = v_RMSE;
+%     j = j+1;
+%     if j > 6
+%         j = 1;
+%     end
+% end
+% 
+% %static
+% h_RMSE_stat = zeros(24,1);
+% v_RMSE_stat = zeros(24,1);
+% j = 1;
+% for i = 1:24 
+%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationSTAT{i}), j);
+%     h_RMSE_stat(i) = h_RMSE;
+%     v_RMSE_stat(i) = v_RMSE;
+%     j = j+1;
+%     if j > 6
+%         j = 1;
+%     end
+% 
+% %day 2
+% h_RMSE_day2 = zeros(24,1);
+% v_RMSE_day2 = zeros(24,1);
+% j = 1;
+% for i = 1:24 
+%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD2{i}), j);
+%     h_RMSE_day2(i) = h_RMSE;
+%     v_RMSE_day2(i) = v_RMSE;
+%     j = j+1;
+%     if j > 6
+%         j = 1;
+%     end
+% end
+% 
+% %day 3
+% h_RMSE_day3 = zeros(24,1);
+% v_RMSE_day3 = zeros(24,1);
+% j = 1;
+% for i = 1:24 
+%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD3{i}), j);
+%     h_RMSE_day3(i) = h_RMSE;
+%     v_RMSE_day3(i) = v_RMSE;
+%     j = j+1;
+%     if j > 6
+%         j = 1;
+%     end
+% end
 
 end
 
