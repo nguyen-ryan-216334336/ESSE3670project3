@@ -1,4 +1,4 @@
-function [h_5cm_30min, v_5cm_30min] = main()
+function [] = main()
 
 % main is used to analyze the effect of data arc length and the effect of
 % the data processing mode
@@ -207,18 +207,18 @@ stationD3 = {station25;station26;station27;station28;station29;station30;
 % end
 
 % 30 min
-h_5cm_30min = zeros(24,1);
-v_5cm_30min = zeros(24,1);
-j = 1;
-for i = 1:24 
-    solutions = readPos(sprintf('%s', station30MIN{i}), j);
-    h_5cm_30min(i) = solutions.h_error_5cm;
-    v_5cm_30min(i) = solutions.v_error_5cm;
-    j = j+1;
-    if j > 6
-        j = 1;
-    end
-end
+% h_5cm_30min = zeros(24,1);
+% v_5cm_30min = zeros(24,1);
+% j = 1;
+% for i = 1:24 
+%     solutions = readPos(sprintf('%s', station30MIN{i}), j);
+%     h_5cm_30min(i) = solutions.h_error_5cm;
+%     v_5cm_30min(i) = solutions.v_error_5cm;
+%     j = j+1;
+%     if j > 6
+%         j = 1;
+%     end
+% end
 
 % %kinematic
 % h_5cm_kin = zeros(24,1);
