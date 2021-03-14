@@ -105,18 +105,18 @@ v_RMSE = sqrt(vdiff/epoch_index);
 solutions.v_RMSE = v_RMSE;
 
 % time to reach 5cm horizontal error
-h_error_5cm = [0,0,0];
+solutions.h_error_5cm = 0;
 for i = 2:length(solutions.hor_error)
     if solutions.hor_error(i-1) > 0.05 && solutions.hor_error(i) <= 0.05
-        h_error_5cm = solutions.time(i, 1:3);
+        solutions.h_error_5cm = solutions.decimalHour(i);
     end
 end
 
 % time to reach 5cm vertical error
-v_error_5cm = [0,0,0];
+solutions.v_error_5cm = 0;
 for i = 2:length(solutions.vert_error)
     if solutions.vert_error(i-1) > 0.05 && solutions.vert_error(i) <= 0.05
-        v_error_5cm = solutions.time(i, 1:3);
+        solutions.v_error_5cm = solutions.decimalHour(i);
     end
 end
 
@@ -138,11 +138,11 @@ subplot(2,1,1)
 plot(solutions.decimalHour, solutions.hor_error)
 title(sprintf('Horizontal Error vs Time for %s', path_file), 'Interpreter', 'none');
 ylabel('Horizontal Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
-annotation('textbox', [0.5, 0.8, 0.1, 0.1], 'String', "Time to reach 5 cm horizontal error: " + h_error_5cm(1) +"h " + h_error_5cm(2)+"m " + h_error_5cm(3)+"s");
+% annotation('textbox', [0.5, 0.8, 0.1, 0.1], 'String', "Time to reach 5 cm horizontal error: " + h_error_5cm(1) +"h " + h_error_5cm(2)+"m " + h_error_5cm(3)+"s");
 subplot(2,1,2)
 plot(solutions.decimalHour, solutions.vert_error)
 title(sprintf('Vertical Error vs Time for %s', path_file), 'Interpreter', 'none');
 ylabel('Vertical Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
-annotation('textbox', [0.5, 0.3, 0.1, 0.1], 'String', "Time to reach 5 cm vertical error: " + v_error_5cm(1) +"h " + v_error_5cm(2)+"m " + v_error_5cm(3)+"s");
+% annotation('textbox', [0.5, 0.3, 0.1, 0.1], 'String', "Time to reach 5 cm vertical error: " + v_error_5cm(1) +"h " + v_error_5cm(2)+"m " + v_error_5cm(3)+"s");
 
 end
