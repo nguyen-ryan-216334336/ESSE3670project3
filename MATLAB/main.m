@@ -113,7 +113,6 @@ h_RMSE_24hr = zeros(24,1);
 v_RMSE_24hr = zeros(24,1);
 j = 1;
 for i = 1:24 
-%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', station24H{i}), j);
     solutions = readPos(sprintf('%s', station24H{i}), j);
     h_RMSE_24hr(i) = solutions.h_RMSE;
     v_RMSE_24hr(i) = solutions.v_RMSE;
