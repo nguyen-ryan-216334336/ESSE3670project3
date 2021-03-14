@@ -139,6 +139,7 @@ end
 fclose(pos_file);
 
 % ************* plotting ************************
+% ********** GDOP and Number of Satellites ******
 % figure('Position', [50 50 1000 600])
 % title(sprintf('GDOP and Number of Satellites vs Time for %s', path_file), 'Interpreter', 'none');
 % yyaxis right
@@ -148,7 +149,8 @@ fclose(pos_file);
 % plot(solutions.decimalHour, solutions.num_sat);
 % ylabel('Number of Satellites'); ylim([0 25])
 % grid on; xlabel('Time (Hours)')
-% 
+ 
+% ********* horizontal and vertical error vs time *************
 % figure('Position', [50 50 1000 600])
 % subplot(2,1,1)
 % plot(solutions.decimalHour, solutions.hor_error)
