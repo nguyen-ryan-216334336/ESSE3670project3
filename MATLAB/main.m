@@ -128,9 +128,9 @@ end
 % v_RMSE_30min = zeros(24,1);
 % j = 1;
 % for i = 1:24 
-%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', station30MIN{i}), j);
-%     h_RMSE_30min(i) = h_RMSE;
-%     v_RMSE_30min(i) = v_RMSE;
+%     solutions = readPos(sprintf('%s', station30MIN{i}), j);
+%     h_RMSE_30min(i) = solutions.h_RMSE;
+%     v_RMSE_30min(i) = solutions.v_RMSE;
 %     j = j+1;
 %     if j > 6
 %         j = 1;
@@ -142,9 +142,9 @@ end
 % v_RMSE_kin = zeros(24,1);
 % j = 1;
 % for i = 1:24 
-%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationKIN{i}), j);
-%     h_RMSE_kin(i) = h_RMSE;
-%     v_RMSE_kin(i) = v_RMSE;
+%     solutions = readPos(sprintf('%s', stationKIN{i}), j);
+%     h_RMSE_kin(i) = solutions.h_RMSE;
+%     v_RMSE_kin(i) = solutions.v_RMSE;
 %     j = j+1;
 %     if j > 6
 %         j = 1;
@@ -156,9 +156,9 @@ end
 % v_RMSE_stat = zeros(24,1);
 % j = 1;
 % for i = 1:24 
-%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationSTAT{i}), j);
-%     h_RMSE_stat(i) = h_RMSE;
-%     v_RMSE_stat(i) = v_RMSE;
+%     solutions = readPos(sprintf('%s', stationSTAT{i}), j);
+%     h_RMSE_stat(i) = solutions.h_RMSE;
+%     v_RMSE_stat(i) = solutions.v_RMSE;
 %     j = j+1;
 %     if j > 6
 %         j = 1;
@@ -169,9 +169,9 @@ end
 % v_RMSE_day2 = zeros(24,1);
 % j = 1;
 % for i = 1:24 
-%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD2{i}), j);
-%     h_RMSE_day2(i) = h_RMSE;
-%     v_RMSE_day2(i) = v_RMSE;
+%     solutions = readPos(sprintf('%s', stationD2{i}), j);
+%     h_RMSE_day2(i) = solutions.h_RMSE;
+%     v_RMSE_day2(i) = solutions.v_RMSE;
 %     j = j+1;
 %     if j > 6
 %         j = 1;
@@ -183,9 +183,9 @@ end
 % v_RMSE_day3 = zeros(24,1);
 % j = 1;
 % for i = 1:24 
-%     [h_RMSE, v_RMSE] = readPos(sprintf('%s', stationD3{i}), j);
-%     h_RMSE_day3(i) = h_RMSE;
-%     v_RMSE_day3(i) = v_RMSE;
+%     solutions = readPos(sprintf('%s', stationD3{i}), j);
+%     h_RMSE_day3(i) = solutions.h_RMSE;
+%     v_RMSE_day3(i) = solutions.v_RMSE;
 %     j = j+1;
 %     if j > 6
 %         j = 1;
