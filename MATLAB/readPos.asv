@@ -8,7 +8,7 @@ stations = [
     -417603.962870248, -4064529.8449063, 4881432.13633575;
     -2218338.20747883, -2201205.12864275, 5543057.48187619;
     -2353614.52398991, -4641385.25666469, 3676976.37155807;
-    -2267796.9641, 5009421.6975, 3220952.5436;
+    -2267750.266, 5009156.142, 3221291.898;
     1337935.78387858, 6070317.12914242, 1427877.31632779];
 
 
@@ -105,27 +105,52 @@ v_RMSE = sqrt(vdiff/epoch_index);
 solutions.v_RMSE = v_RMSE;
 
 % time to reach 5cm horizontal error
-for i = 1:length(solutions.hor_error)
-    
+solutions.h_error_5cm = 0;
+terminate = 0;
+i = 1;
+while terminate == 0
+    if solutions.hor_error(i) <= 0.05
+        solutions.h_error_5cm = solutions.decimalHour(i);
+        terminate = 1;
+    end
+s = i+1;
+end
+
+% time to reach 5cm vertical error
+solutions.v_error_5cm = 0;
+terminate = 0;
+s = 1;
+while terminate == 0
+    if solutions.vert_error(i) <= 0.05
+        solutions.v_error_5cm = solutions.decimalHour(i);
+        terminate = 1;
+    end
+ i = i+1;
+end
 
 fclose(pos_file);
-
+x = 9;
 % ************* plotting ************************
-figure('Position', [50 50 1000 600])
-yyaxis right
-plot(solutions.decimalHour, solutions.GDOP);
-ylabel('GDOP'); ylim([0 5])
-yyaxis left
-plot(solutions.decimalHour, solutions.num_sat);
-ylabel('Number of Satellites'); ylim([0 25])
-grid on; xlabel('Time (Hours)')
-
-figure('Position', [50 50 1000 600])
-subplot(2,1,1)
-plot(solutions.decimalHour, solutions.hor_error)
-ylabel('Horizontal Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
-subplot(2,1,2)
-plot(solutions.decimalHour, solutions.vert_error)
-ylabel('Vertical Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
+% figure('Position', [50 50 1000 600])
+% title(sprintf('GDOP and Number of Satellites vs Time for %s', path_file), 'Interpreter', 'none');
+% yyaxis right
+% plot(solutions.decimalHour, solutions.GDOP);
+% ylabel('GDOP'); ylim([0 5])
+% yyaxis left
+% plot(solutions.decimalHour, solutions.num_sat);
+% ylabel('Number of Satellites'); ylim([0 25])
+% grid on; xlabel('Time (Hours)')
+% 
+% figure('Position', [50 50 1000 600])
+% subplot(2,1,1)
+% plot(solutions.decimalHour, solutions.hor_error)
+% title(sprintf('Horizontal Error vs Time for %s', path_file), 'Interpreter', 'none');
+% ylabel('Horizontal Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
+% % annotation('textbox', [0.5, 0.8, 0.1, 0.1], 'String', "Time to reach 5 cm horizontal error: " + h_error_5cm(1) +"h " + h_error_5cm(2)+"m " + h_error_5cm(3)+"s");
+% subplot(2,1,2)
+% plot(solutions.decimalHour, solutions.vert_error)
+% title(sprintf('Vertical Error vs Time for %s', path_file), 'Interpreter', 'none');
+% ylabel('Vertical Error (m)'); ylim([0 0.5]); grid on; xlabel('Time (Hours)')
+% % annotation('textbox', [0.5, 0.3, 0.1, 0.1], 'String', "Time to reach 5 cm vertical error: " + v_error_5cm(1) +"h " + v_error_5cm(2)+"m " + v_error_5cm(3)+"s");
 
 end

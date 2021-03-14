@@ -106,22 +106,38 @@ solutions.v_RMSE = v_RMSE;
 
 % time to reach 5cm horizontal error
 solutions.h_error_5cm = 0;
-for i = 2:length(solutions.hor_error)
-    if solutions.hor_error(i-1) > 0.05 && solutions.hor_error(i) <= 0.05
-        solutions.h_error_5cm = solutions.decimalHour(i);
+terminate = 1;
+k = 1;
+while terminate == 1
+    if solutions.hor_error(k) <= 0.05
+         solutions.h_error_5cm = solutions.decimalHour(k);
+         terminate = -1;
+    elseif k == length(solutions.hor_error)
+         terminate = -1;
+         solutions.h_error_5cm = NaN;
+    else
+        k = k+1;
     end
 end
+
 
 % time to reach 5cm vertical error
 solutions.v_error_5cm = 0;
-for i = 2:length(solutions.vert_error)
-    if solutions.vert_error(i-1) > 0.05 && solutions.vert_error(i) <= 0.05
-        solutions.v_error_5cm = solutions.decimalHour(i);
+terminate = 1;
+k = 1;
+while terminate == 1
+    if solutions.vert_error(k) <= 0.05
+        solutions.v_error_5cm = solutions.decimalHour(k);
+        terminate = -1;
+    elseif k == length(solutions.vert_error)
+        terminate = -1;
+        solutions.v_error_5cm = NaN;
     end
+    k = k+1;
 end
 
 fclose(pos_file);
-x = 9;
+
 % ************* plotting ************************
 % figure('Position', [50 50 1000 600])
 % title(sprintf('GDOP and Number of Satellites vs Time for %s', path_file), 'Interpreter', 'none');
