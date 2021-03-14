@@ -1,3 +1,6 @@
+% https://www.oc.nps.edu/oc2902w/coord/llhxyz.htm 
+% XYZ TO LAT AND LONG CONVERTER
+
 ALGOlat = 45.9558; 
 ALGOlong = 281.92863;
 
