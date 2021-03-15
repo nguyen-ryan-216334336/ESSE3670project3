@@ -106,6 +106,30 @@ stationD3 = {station25;station26;station27;station28;station29;station30;
     station31;station32;station33;station34;station35;station36;station37;station38;station39;station40;
     station41;station42;station43;station44;station45;station46;station47;station48};
 
+24H KINEMATIC DAY2
+station24K2 = {station1;station2;station3;station4;station5;station6};
+
+%24H STATIC DAY2
+station24S2 = {station7;station8;station9;station10;station11;station12};
+
+%30MIN KINEMATIC DAY2
+station30K2 = {station13;station14;station15;station16;station17;station18};
+
+%30MIN STATIC DAY2
+station30S2 = {station19;station20;station21;station22;station23;station24};
+
+%24H KINEMATIC DAY3
+station24K3 = {station25;station26;station27;station28;station29;station30};
+
+%24H STATIC DAY3
+station24S3 = {station31;station32;station33;station34;station35;station36};
+
+%30MIN KINEMATIC DAY3
+station30K3 = {station37;station38;station39;station40;station41;station42};
+
+%30MIN STATIC DAY3
+station30S3 = {station43;station44;station45;station46;station47;station48};
+
 % ****** horizontal and vertical RMSE for 24 hour data arc ***********
 % j counts through the stations numbers (1 to 6) to be used in readPos
 % i iterates through each element of the 24H vector
