@@ -600,14 +600,14 @@ station30S3 = {station43;station44;station45;station46;station47;station48};
 %     vert_error = solutions.vert_error;
 %     hour = solutions.decimalHour;
 %     
-%     if i==5
-%         hor_error(numel(hor_error)+1) = 0; 
-%         hour(numel(hour)+1) = hour(numel(hour));
-%     end
-%     
-%      if i==5
-%         vert_error(numel(vert_error)+1) = 0; 
-%     end
+    if i==5
+        hor_error(numel(hor_error)+1) = 0; 
+        hour(numel(hour)+1) = hour(numel(hour));
+    end
+    
+     if i==5
+        vert_error(numel(vert_error)+1) = 0; 
+    end
 %     
 %     length = numel(hor_error);
 %     sizes = [sizes, length];
