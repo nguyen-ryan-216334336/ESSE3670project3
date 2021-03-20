@@ -274,7 +274,7 @@ station30S3 = {station43;station44;station45;station46;station47;station48};
 % 
 %%%%%%%%%%% CHARTS %%%%%%%%%%%%%%%%%%%%%%
 
-%     %24H KINEMATIC DAY 2
+    %24H KINEMATIC DAY 2
 %  all_hor_error24K2 = [];
 %  all_vert_error24K2 = [];
 %  hour = [];
@@ -310,56 +310,57 @@ station30S3 = {station43;station44;station45;station46;station47;station48};
 % legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 
 % 24H STATIC DAY 2
-all_hor_error24S2 = [];
- all_vert_error24S2 = [];
- hour = [];
- length = [];
- sizes = [];
- 
-for i=1:6
-    solutions = readPos(sprintf('%s', station24S2{i}), i);
-    hor_error = solutions.hor_error;
-    vert_error = solutions.vert_error;
-    hour = solutions.decimalHour;
-    
-    if i==5
-        hor_error(numel(hor_error)+1) = 0; 
-        hour(numel(hour)+1) = hour(numel(hour));
-    end
-    
+% all_hor_error24S2 = [];
+%  all_vert_error24S2 = [];
+%  hour = [];
+%  length = [];
+%  sizes = [];
+%  
+% for i=1:6
+%     solutions = readPos(sprintf('%s', station24S2{i}), i);
+%     hor_error = solutions.hor_error;
+%     vert_error = solutions.vert_error;
+%     hour = solutions.decimalHour;
+%     
 %     length = numel(vert_error);
 %     sizes = [sizes, length];
-     if i==5
-        vert_error(numel(vert_error)+1) = 0; 
-    end
-    
-    length = numel(hor_error);
-    sizes = [sizes, length];
-    
-    all_hor_error24S2 = [all_hor_error24S2, hor_error];
-    all_vert_error24S2 = [all_vert_error24S2, vert_error];
-    
-    subplot(2,1,1)
-    plot(hour, all_hor_error24S2(:,i));
-    hold on
-    
-    subplot(2,1,2)
-    plot(hour, all_vert_error24S2(:,i));
-    hold on
-end
-subplot(2,1,1)
-title('24 Hour STATIC Day 2 Horizontal Error');
-xlabel('Hours');
-ylabel('Horizontal Error (m)');
-legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
-
-subplot(2,1,2)
-title('24 Hour STATIC Day 2 Vertical Error');
-xlabel('Hours');
-ylabel('Vertical Error (m)');
-legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
+%     
+%     if i==5
+%         hor_error(numel(hor_error)+1) = 0; 
+%         hour(numel(hour)+1) = hour(numel(hour));
+%     end
+%     
+%      if i==5
+%         vert_error(numel(vert_error)+1) = 0; 
+%     end
+%     
+%     length = numel(hor_error);
+%     sizes = [sizes, length];
+%     
+%     all_hor_error24S2 = [all_hor_error24S2, hor_error];
+%     all_vert_error24S2 = [all_vert_error24S2, vert_error];
+%     
+%     subplot(2,1,1)
+%     plot(hour, all_hor_error24S2(:,i));
+%     hold on
+%     
+%     subplot(2,1,2)
+%     plot(hour, all_vert_error24S2(:,i));
+%     hold on
+% end
+% subplot(2,1,1)
+% title('24 Hour STATIC Day 2 Horizontal Error');
+% xlabel('Hours');
+% ylabel('Horizontal Error (m)');
+% legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 % 
-% % %30MIN KINEMATIC DAY 2
+% subplot(2,1,2)
+% title('24 Hour STATIC Day 2 Vertical Error');
+% xlabel('Hours');
+% ylabel('Vertical Error (m)');
+% legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
+
+% 30MIN KINEMATIC DAY 2
 % all_hor_error30K2 = [];
 %  all_vert_error30K2 = [];
 %  hour = [];
@@ -372,16 +373,10 @@ legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 %     vert_error = solutions.vert_error;
 %     hour = solutions.decimalHour;
 %     
-% %     if i==5
-% %         hor_error(numel(hor_error)+1) = 0; 
-% %         hour(numel(hour)+1) = hour(numel(hour));
-% %     end
-%     
 %     length = numel(vert_error);
 %     sizes = [sizes, length];
-% %      if i==5
-% %         vert_error(numel(vert_error)+1) = 0; 
-% %     end
+%     
+%     
 %     
 %     length = numel(hor_error);
 %     sizes = [sizes, length];
@@ -408,8 +403,8 @@ legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 % xlabel('Hours');
 % ylabel('Vertical Error (m)');
 % legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
-% 
-% %30MIN STATIC DAY 2
+
+% 30MIN STATIC DAY 2
 % all_hor_error30S2 = [];
 %  all_vert_error30S2 = [];
 %  hour = [];
@@ -459,8 +454,8 @@ legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 % xlabel('Hours');
 % ylabel('Vertical Error (m)');
 % legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
-
-    %24H KINEMATIC DAY 3
+% 
+%     24H KINEMATIC DAY 3
 %  all_hor_error24K3 = [];
 %  all_vert_error24K3 = [];
 %  hour = [];
@@ -513,8 +508,8 @@ legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 %         hour(numel(hour)+1) = hour(numel(hour));
 %     end
 %     
-% %     length = numel(vert_error);
-% %     sizes = [sizes, length];
+%     length = numel(vert_error);
+%     sizes = [sizes, length];
 %      if i==5
 %         vert_error(numel(vert_error)+1) = 0; 
 %     end
@@ -545,57 +540,50 @@ legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 % ylabel('Vertical Error (m)');
 % legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 
-%30MIN KINEMATIC DAY 2
-% all_hor_error30K3 = [];
-%  all_vert_error30K3 = [];
-%  hour = [];
-%  length = [];
-%  sizes = [];
-%  
-% for i=1:6
-%     solutions = readPos(sprintf('%s', station30K3{i}), i);
-%     hor_error = solutions.hor_error;
-%     vert_error = solutions.vert_error;
-%     hour = solutions.decimalHour;
-%     
-% %     if i==5
-% %         hor_error(numel(hor_error)+1) = 0; 
-% %         hour(numel(hour)+1) = hour(numel(hour));
-% %     end
-%     
-%     length = numel(vert_error);
-%     sizes = [sizes, length];
-% %      if i==5
-% %         vert_error(numel(vert_error)+1) = 0; 
-% %     end
-%     
-%     length = numel(hor_error);
-%     sizes = [sizes, length];
-%     
-%     all_hor_error30K3 = [all_hor_error30K3, hor_error];
-%     all_vert_error30K3 = [all_vert_error30K3, vert_error];
-%     
-%     subplot(2,1,1)
-%     plot(hour, all_hor_error30K3(:,i));
-%     hold on
-%     
-%     subplot(2,1,2)
-%     plot(hour, all_vert_error30K3(:,i));
-%     hold on
-% end
-% subplot(2,1,1)
-% title('30 Min KINEMATIC Day 3 Horizontal Error');
-% xlabel('Hours');
-% ylabel('Horizontal Error (m)');
-% legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
-% 
-% subplot(2,1,2)
-% title('30 Min KINEMATIC Day 3 Vertical Error');
-% xlabel('Hours');
-% ylabel('Vertical Error (m)');
-% legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
+% 30MIN KINEMATIC DAY 3
+all_hor_error30K3 = [];
+ all_vert_error30K3 = [];
+ hour = [];
+ length = [];
+ sizes = [];
+ 
+for i=1:6
+    solutions = readPos(sprintf('%s', station30K3{i}), i);
+    hor_error = solutions.hor_error;
+    vert_error = solutions.vert_error;
+    hour = solutions.decimalHour;
+    
+    length = numel(vert_error);
+    sizes = [sizes, length];
+    
+    
+    length = numel(hor_error);
+    sizes = [sizes, length];
+    
+    all_hor_error30K3 = [all_hor_error30K3, hor_error];
+    all_vert_error30K3 = [all_vert_error30K3, vert_error];
+    
+    subplot(2,1,1)
+    plot(hour, all_hor_error30K3(:,i));
+    hold on
+    
+    subplot(2,1,2)
+    plot(hour, all_vert_error30K3(:,i));
+    hold on
+end
+subplot(2,1,1)
+title('30 Min KINEMATIC Day 3 Horizontal Error');
+xlabel('Hours');
+ylabel('Horizontal Error (m)');
+legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
 
-% %30MIN STATIC DAY 2
+subplot(2,1,2)
+title('30 Min KINEMATIC Day 3 Vertical Error');
+xlabel('Hours');
+ylabel('Vertical Error (m)');
+legend('ALGO00CAN','DUBO00CAN','WHIT00CAN','GOLD00USA','WUHN00CHN','IISC00IND')
+
+%30MIN STATIC DAY 3
 % all_hor_error30S3 = [];
 %  all_vert_error30S3 = [];
 %  hour = [];
